@@ -39,7 +39,7 @@ $qc="select * from register where email='$email'";
 $c=mysqli_query($con,$qc);
 if(mysqli_num_rows($c))
 {
-echo"user already exist";
+echo"***user already exist***s";
 }
 else
 {
@@ -47,7 +47,7 @@ $sq="insert into register values('$name','$age','$email','$phone','$password')";
 $q=mysqli_query($con,$sq);
 if($q)
 {
-echo "1 row inserted successfully";
+header("location:login.php");
 }
 }
 }
